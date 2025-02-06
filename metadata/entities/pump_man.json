@@ -1,0 +1,146 @@
+{
+    "Shifts": {
+        "propertiesMap": {
+            "columns": [
+                {
+                    "fieldName": "id",
+                    "type": "integer",
+                    "fullyQualifiedType": "integer",
+                    "columnName": "id",
+                    "isPrimaryKey": true,
+                    "notNull": true,
+                    "length": 0,
+                    "precision": 10,
+                    "generator": "identity",
+                    "isRelated": false,
+                    "scale": 0
+                },
+                {
+                    "fieldName": "shiftWorker",
+                    "type": "string",
+                    "fullyQualifiedType": "string",
+                    "columnName": "shift_worker",
+                    "isPrimaryKey": false,
+                    "notNull": true,
+                    "length": 255,
+                    "precision": 0,
+                    "generator": "assigned",
+                    "isRelated": false,
+                    "scale": 0
+                },
+                {
+                    "fieldName": "shiftStartTime",
+                    "type": "datetime",
+                    "fullyQualifiedType": "datetime",
+                    "columnName": "shift_start_time",
+                    "isPrimaryKey": false,
+                    "notNull": true,
+                    "length": 0,
+                    "precision": 0,
+                    "generator": "assigned",
+                    "isRelated": false,
+                    "scale": 0
+                },
+                {
+                    "fieldName": "shiftEndTime",
+                    "type": "datetime",
+                    "fullyQualifiedType": "datetime",
+                    "columnName": "shift_end_time",
+                    "isPrimaryKey": false,
+                    "notNull": true,
+                    "length": 0,
+                    "precision": 0,
+                    "generator": "assigned",
+                    "isRelated": false,
+                    "scale": 0
+                },
+                {
+                    "fieldName": "lastModifiedAt",
+                    "type": "timestamp",
+                    "fullyQualifiedType": "timestamp",
+                    "columnName": "last_modified_at",
+                    "isPrimaryKey": false,
+                    "notNull": true,
+                    "length": 0,
+                    "precision": 0,
+                    "generator": "assigned",
+                    "isRelated": false,
+                    "scale": 0
+                },
+                {
+                    "fieldName": "createdAt",
+                    "type": "timestamp",
+                    "fullyQualifiedType": "timestamp",
+                    "columnName": "created_at",
+                    "isPrimaryKey": false,
+                    "notNull": true,
+                    "length": 0,
+                    "precision": 0,
+                    "generator": "assigned",
+                    "isRelated": false,
+                    "scale": 0
+                }
+            ],
+            "entityName": "Shifts",
+            "fullyQualifiedName": "com.pumpman.pump_man.Shifts",
+            "tableType": "TABLE",
+            "primaryFields": [
+                "id"
+            ]
+        },
+        "relatedTables": []
+    },
+    "Workers": {
+        "propertiesMap": {
+            "columns": [
+                {
+                    "fieldName": "workerName",
+                    "type": "string",
+                    "fullyQualifiedType": "string",
+                    "columnName": "worker_name",
+                    "isPrimaryKey": true,
+                    "notNull": true,
+                    "length": 255,
+                    "precision": 0,
+                    "generator": "assigned",
+                    "isRelated": false,
+                    "scale": 0
+                },
+                {
+                    "fieldName": "active",
+                    "type": "boolean",
+                    "fullyQualifiedType": "boolean",
+                    "columnName": "active",
+                    "isPrimaryKey": false,
+                    "notNull": true,
+                    "length": 0,
+                    "precision": 1,
+                    "generator": "assigned",
+                    "isRelated": false,
+                    "defaultValue": "1",
+                    "scale": 0
+                },
+                {
+                    "fieldName": "image",
+                    "type": "blob",
+                    "fullyQualifiedType": "blob",
+                    "columnName": "image",
+                    "isPrimaryKey": false,
+                    "notNull": false,
+                    "length": -1,
+                    "precision": 0,
+                    "generator": "assigned",
+                    "isRelated": false,
+                    "scale": 0
+                }
+            ],
+            "entityName": "Workers",
+            "fullyQualifiedName": "com.pumpman.pump_man.Workers",
+            "tableType": "TABLE",
+            "primaryFields": [
+                "workerName"
+            ]
+        },
+        "relatedTables": []
+    }
+}

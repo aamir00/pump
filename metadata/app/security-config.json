@@ -1,0 +1,32 @@
+{
+  "securityEnabled" : true,
+  "authenticated" : false,
+  "rememberMeEnabled" : false,
+  "loginConfig" : {
+    "type" : "PAGE",
+    "pageName" : "Login",
+    "cookieMaxAge" : -1,
+    "cookiePath" : "",
+    "cookieBase64Encode" : true,
+    "jvmRoute" : "",
+    "sameSite" : "",
+    "sessionTimeout" : {
+      "type" : "PAGE",
+      "pageName" : "Login",
+      "timeoutValue" : 30
+    },
+    "sessionConcurrencyConfig" : {
+      "maxSessionsAllowed" : -1
+    }
+  },
+  "userInfo" : null,
+  "csrfHeaderName" : "X-WM-XSRF-TOKEN",
+  "csrfCookieName" : "wm_xsrf_token",
+  "roles" : [ {
+    "name" : "admin",
+    "homePage" : "Main"
+  }, {
+    "name" : "user",
+    "homePage" : "Main"
+  } ]
+}

@@ -1,0 +1,3395 @@
+{
+  "serviceDefs" : {
+    "WorkersController_findWorkers" : {
+      "id" : "WorkersController_findWorkers",
+      "crudOperationId" : null,
+      "service" : "pump_man",
+      "controller" : "WorkersController",
+      "operationType" : null,
+      "type" : "org.springframework.data.domain.Page",
+      "wmServiceOperationInfo" : {
+        "name" : "findWorkers",
+        "methodType" : "get",
+        "relativePath" : "/pump_man/Workers",
+        "directPath" : null,
+        "httpMethod" : "get",
+        "parameters" : [ {
+          "name" : "q",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "java.lang.String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "page",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "size",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "sort",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "String",
+          "readOnly" : false,
+          "contentType" : null
+        } ],
+        "definitions" : { },
+        "produces" : null,
+        "consumes" : null,
+        "proxySettings" : {
+          "web" : true,
+          "mobile" : true,
+          "withCredentials" : false
+        },
+        "securityDefinitions" : [ ]
+      }
+    },
+    "ShiftsController_patchShifts" : {
+      "id" : "ShiftsController_patchShifts",
+      "crudOperationId" : null,
+      "service" : "pump_man",
+      "controller" : "ShiftsController",
+      "operationType" : null,
+      "type" : "com.pumpman.pump_man.Shifts",
+      "wmServiceOperationInfo" : {
+        "name" : "patchShifts",
+        "methodType" : "patch",
+        "relativePath" : "/pump_man/Shifts/{id}",
+        "directPath" : null,
+        "httpMethod" : "patch",
+        "parameters" : [ {
+          "name" : "id",
+          "parameterType" : "path",
+          "required" : true,
+          "type" : "java.lang.Integer",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "Shifts",
+          "parameterType" : "body",
+          "required" : true,
+          "type" : "com.pumpman.pump_man.Shifts",
+          "readOnly" : false,
+          "contentType" : null
+        } ],
+        "definitions" : {
+          "com.pumpman.pump_man.Shifts" : [ {
+            "name" : "shiftWorker",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.lang.String",
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "id",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.lang.Integer",
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "lastModifiedAt",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.sql.Timestamp",
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "shiftStartTime",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.time.LocalDateTime",
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "shiftEndTime",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.time.LocalDateTime",
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "createdAt",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.sql.Timestamp",
+            "readOnly" : false,
+            "contentType" : null
+          } ]
+        },
+        "produces" : null,
+        "consumes" : null,
+        "proxySettings" : {
+          "web" : true,
+          "mobile" : true,
+          "withCredentials" : false
+        },
+        "securityDefinitions" : [ ]
+      }
+    },
+    "ShiftsController_findAssociatedShiftCollections" : {
+      "id" : "ShiftsController_findAssociatedShiftCollections",
+      "crudOperationId" : null,
+      "service" : "pump_man",
+      "controller" : "ShiftsController",
+      "operationType" : null,
+      "type" : "org.springframework.data.domain.Page",
+      "wmServiceOperationInfo" : {
+        "name" : "findAssociatedShiftCollections",
+        "methodType" : "get",
+        "relativePath" : "/pump_man/Shifts/{id}/shiftCollections",
+        "directPath" : null,
+        "httpMethod" : "get",
+        "parameters" : [ {
+          "name" : "id",
+          "parameterType" : "path",
+          "required" : true,
+          "type" : "java.lang.Integer",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "page",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "size",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "sort",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "String",
+          "readOnly" : false,
+          "contentType" : null
+        } ],
+        "definitions" : { },
+        "produces" : null,
+        "consumes" : null,
+        "proxySettings" : {
+          "web" : true,
+          "mobile" : true,
+          "withCredentials" : false
+        },
+        "securityDefinitions" : [ ]
+      }
+    },
+    "ShiftCollectionController_deleteShiftCollection" : {
+      "id" : "ShiftCollectionController_deleteShiftCollection",
+      "crudOperationId" : null,
+      "service" : "pump_man",
+      "controller" : "ShiftCollectionController",
+      "operationType" : null,
+      "type" : "boolean",
+      "wmServiceOperationInfo" : {
+        "name" : "deleteShiftCollection",
+        "methodType" : "delete",
+        "relativePath" : "/pump_man/ShiftCollection/{collectionId}",
+        "directPath" : null,
+        "httpMethod" : "delete",
+        "parameters" : [ {
+          "name" : "collectionId",
+          "parameterType" : "path",
+          "required" : true,
+          "type" : "java.lang.Integer",
+          "readOnly" : false,
+          "contentType" : null
+        } ],
+        "definitions" : { },
+        "produces" : null,
+        "consumes" : null,
+        "proxySettings" : {
+          "web" : true,
+          "mobile" : true,
+          "withCredentials" : false
+        },
+        "securityDefinitions" : [ ]
+      }
+    },
+    "ShiftDetailsController_countShiftDetails" : {
+      "id" : "ShiftDetailsController_countShiftDetails",
+      "crudOperationId" : null,
+      "service" : "pump_man",
+      "controller" : "ShiftDetailsController",
+      "operationType" : null,
+      "type" : "integer",
+      "wmServiceOperationInfo" : {
+        "name" : "countShiftDetails",
+        "methodType" : "get",
+        "relativePath" : "/pump_man/ShiftDetails/count",
+        "directPath" : null,
+        "httpMethod" : "get",
+        "parameters" : [ {
+          "name" : "q",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "java.lang.String",
+          "readOnly" : false,
+          "contentType" : null
+        } ],
+        "definitions" : { },
+        "produces" : null,
+        "consumes" : null,
+        "proxySettings" : {
+          "web" : true,
+          "mobile" : true,
+          "withCredentials" : false
+        },
+        "securityDefinitions" : [ ]
+      }
+    },
+    "ShiftDetailsController_searchShiftDetailsByQueryFilters" : {
+      "id" : "ShiftDetailsController_searchShiftDetailsByQueryFilters",
+      "crudOperationId" : null,
+      "service" : "pump_man",
+      "controller" : "ShiftDetailsController",
+      "operationType" : null,
+      "type" : "org.springframework.data.domain.Page",
+      "wmServiceOperationInfo" : {
+        "name" : "searchShiftDetailsByQueryFilters",
+        "methodType" : "post",
+        "relativePath" : "/pump_man/ShiftDetails/search",
+        "directPath" : null,
+        "httpMethod" : "post",
+        "parameters" : [ {
+          "name" : "page",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "size",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "sort",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "QueryFilter",
+          "parameterType" : "body",
+          "required" : true,
+          "type" : "com.wavemaker.runtime.data.expression.QueryFilter",
+          "readOnly" : false,
+          "contentType" : null
+        } ],
+        "definitions" : {
+          "com.wavemaker.runtime.data.expression.QueryFilter" : [ {
+            "name" : "attributeType",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.lang.String",
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "attributeName",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.lang.String",
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "attributeValue",
+            "parameterType" : null,
+            "required" : false,
+            "type" : null,
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "filterCondition",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.lang.String",
+            "readOnly" : false,
+            "contentType" : null
+          } ]
+        },
+        "produces" : null,
+        "consumes" : null,
+        "proxySettings" : {
+          "web" : true,
+          "mobile" : true,
+          "withCredentials" : false
+        },
+        "securityDefinitions" : [ ]
+      }
+    },
+    "ShiftsController_createShifts" : {
+      "id" : "ShiftsController_createShifts",
+      "crudOperationId" : null,
+      "service" : "pump_man",
+      "controller" : "ShiftsController",
+      "operationType" : null,
+      "type" : "com.pumpman.pump_man.Shifts",
+      "wmServiceOperationInfo" : {
+        "name" : "createShifts",
+        "methodType" : "post",
+        "relativePath" : "/pump_man/Shifts",
+        "directPath" : null,
+        "httpMethod" : "post",
+        "parameters" : [ {
+          "name" : "Shifts",
+          "parameterType" : "body",
+          "required" : true,
+          "type" : "com.pumpman.pump_man.Shifts",
+          "readOnly" : false,
+          "contentType" : null
+        } ],
+        "definitions" : {
+          "com.pumpman.pump_man.Shifts" : [ {
+            "name" : "shiftWorker",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.lang.String",
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "id",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.lang.Integer",
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "lastModifiedAt",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.sql.Timestamp",
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "shiftStartTime",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.time.LocalDateTime",
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "shiftEndTime",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.time.LocalDateTime",
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "createdAt",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.sql.Timestamp",
+            "readOnly" : false,
+            "contentType" : null
+          } ]
+        },
+        "produces" : null,
+        "consumes" : null,
+        "proxySettings" : {
+          "web" : true,
+          "mobile" : true,
+          "withCredentials" : false
+        },
+        "securityDefinitions" : [ ]
+      }
+    },
+    "ShiftCollectionController_editShiftCollection" : {
+      "id" : "ShiftCollectionController_editShiftCollection",
+      "crudOperationId" : null,
+      "service" : "pump_man",
+      "controller" : "ShiftCollectionController",
+      "operationType" : null,
+      "type" : "com.pumpman.pump_man.ShiftCollection",
+      "wmServiceOperationInfo" : {
+        "name" : "editShiftCollection",
+        "methodType" : "put",
+        "relativePath" : "/pump_man/ShiftCollection/{collectionId}",
+        "directPath" : null,
+        "httpMethod" : "put",
+        "parameters" : [ {
+          "name" : "collectionId",
+          "parameterType" : "path",
+          "required" : true,
+          "type" : "java.lang.Integer",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "ShiftCollection",
+          "parameterType" : "body",
+          "required" : true,
+          "type" : "com.pumpman.pump_man.ShiftCollection",
+          "readOnly" : false,
+          "contentType" : null
+        } ],
+        "definitions" : {
+          "com.pumpman.pump_man.ShiftCollection" : [ {
+            "name" : "paymentAmount",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.lang.Double",
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "collectionId",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.lang.Integer",
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "paymentType",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.lang.String",
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "shifts",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "com.pumpman.pump_man.Shifts",
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "lastModifiedAt",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.sql.Timestamp",
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "shiftId",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.lang.Integer",
+            "readOnly" : false,
+            "contentType" : null
+          } ]
+        },
+        "produces" : null,
+        "consumes" : null,
+        "proxySettings" : {
+          "web" : true,
+          "mobile" : true,
+          "withCredentials" : false
+        },
+        "securityDefinitions" : [ ]
+      }
+    },
+    "SecurityController_getUsername" : {
+      "id" : "SecurityController_getUsername",
+      "crudOperationId" : null,
+      "service" : "securityService",
+      "controller" : "SecurityController",
+      "operationType" : null,
+      "type" : "com.wavemaker.commons.wrapper.StringWrapper",
+      "wmServiceOperationInfo" : {
+        "name" : "getUsername",
+        "methodType" : "get",
+        "relativePath" : "/security/user/username",
+        "directPath" : null,
+        "httpMethod" : "get",
+        "parameters" : [ ],
+        "definitions" : { },
+        "produces" : null,
+        "consumes" : null,
+        "proxySettings" : {
+          "web" : true,
+          "mobile" : true,
+          "withCredentials" : false
+        },
+        "securityDefinitions" : [ ]
+      }
+    },
+    "ShiftDetailsController_findShiftDetails" : {
+      "id" : "ShiftDetailsController_findShiftDetails",
+      "crudOperationId" : null,
+      "service" : "pump_man",
+      "controller" : "ShiftDetailsController",
+      "operationType" : null,
+      "type" : "org.springframework.data.domain.Page",
+      "wmServiceOperationInfo" : {
+        "name" : "findShiftDetails",
+        "methodType" : "get",
+        "relativePath" : "/pump_man/ShiftDetails",
+        "directPath" : null,
+        "httpMethod" : "get",
+        "parameters" : [ {
+          "name" : "q",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "java.lang.String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "page",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "size",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "sort",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "String",
+          "readOnly" : false,
+          "contentType" : null
+        } ],
+        "definitions" : { },
+        "produces" : null,
+        "consumes" : null,
+        "proxySettings" : {
+          "web" : true,
+          "mobile" : true,
+          "withCredentials" : false
+        },
+        "securityDefinitions" : [ ]
+      }
+    },
+    "WorkersController_countWorkers" : {
+      "id" : "WorkersController_countWorkers",
+      "crudOperationId" : null,
+      "service" : "pump_man",
+      "controller" : "WorkersController",
+      "operationType" : null,
+      "type" : "integer",
+      "wmServiceOperationInfo" : {
+        "name" : "countWorkers",
+        "methodType" : "get",
+        "relativePath" : "/pump_man/Workers/count",
+        "directPath" : null,
+        "httpMethod" : "get",
+        "parameters" : [ {
+          "name" : "q",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "java.lang.String",
+          "readOnly" : false,
+          "contentType" : null
+        } ],
+        "definitions" : { },
+        "produces" : null,
+        "consumes" : null,
+        "proxySettings" : {
+          "web" : true,
+          "mobile" : true,
+          "withCredentials" : false
+        },
+        "securityDefinitions" : [ ]
+      }
+    },
+    "WorkersController_exportWorkersAndGetURL" : {
+      "id" : "WorkersController_exportWorkersAndGetURL",
+      "crudOperationId" : null,
+      "service" : "pump_man",
+      "controller" : "WorkersController",
+      "operationType" : null,
+      "type" : "com.wavemaker.commons.wrapper.StringWrapper",
+      "wmServiceOperationInfo" : {
+        "name" : "exportWorkersAndGetURL",
+        "methodType" : "post",
+        "relativePath" : "/pump_man/Workers/export",
+        "directPath" : null,
+        "httpMethod" : "post",
+        "parameters" : [ {
+          "name" : "DataExportOptions",
+          "parameterType" : "body",
+          "required" : true,
+          "type" : "com.wavemaker.runtime.data.export.DataExportOptions",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "page",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "size",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "sort",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "String",
+          "readOnly" : false,
+          "contentType" : null
+        } ],
+        "definitions" : { },
+        "produces" : null,
+        "consumes" : [ "application/json" ],
+        "proxySettings" : {
+          "web" : true,
+          "mobile" : true,
+          "withCredentials" : false
+        },
+        "securityDefinitions" : [ ]
+      }
+    },
+    "SecurityController_getUserRoles" : {
+      "id" : "SecurityController_getUserRoles",
+      "crudOperationId" : null,
+      "service" : "securityService",
+      "controller" : "SecurityController",
+      "operationType" : null,
+      "type" : "array",
+      "wmServiceOperationInfo" : {
+        "name" : "getUserRoles",
+        "methodType" : "get",
+        "relativePath" : "/security/user/roles",
+        "directPath" : null,
+        "httpMethod" : "get",
+        "parameters" : [ ],
+        "definitions" : { },
+        "produces" : null,
+        "consumes" : null,
+        "proxySettings" : {
+          "web" : true,
+          "mobile" : true,
+          "withCredentials" : false
+        },
+        "securityDefinitions" : [ ]
+      }
+    },
+    "WorkersController_searchWorkersByQueryFilters" : {
+      "id" : "WorkersController_searchWorkersByQueryFilters",
+      "crudOperationId" : null,
+      "service" : "pump_man",
+      "controller" : "WorkersController",
+      "operationType" : null,
+      "type" : "org.springframework.data.domain.Page",
+      "wmServiceOperationInfo" : {
+        "name" : "searchWorkersByQueryFilters",
+        "methodType" : "post",
+        "relativePath" : "/pump_man/Workers/search",
+        "directPath" : null,
+        "httpMethod" : "post",
+        "parameters" : [ {
+          "name" : "page",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "size",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "sort",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "QueryFilter",
+          "parameterType" : "body",
+          "required" : true,
+          "type" : "com.wavemaker.runtime.data.expression.QueryFilter",
+          "readOnly" : false,
+          "contentType" : null
+        } ],
+        "definitions" : {
+          "com.wavemaker.runtime.data.expression.QueryFilter" : [ {
+            "name" : "attributeType",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.lang.String",
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "attributeName",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.lang.String",
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "attributeValue",
+            "parameterType" : null,
+            "required" : false,
+            "type" : null,
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "filterCondition",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.lang.String",
+            "readOnly" : false,
+            "contentType" : null
+          } ]
+        },
+        "produces" : null,
+        "consumes" : null,
+        "proxySettings" : {
+          "web" : true,
+          "mobile" : true,
+          "withCredentials" : false
+        },
+        "securityDefinitions" : [ ]
+      }
+    },
+    "WorkersController_deleteWorkers" : {
+      "id" : "WorkersController_deleteWorkers",
+      "crudOperationId" : null,
+      "service" : "pump_man",
+      "controller" : "WorkersController",
+      "operationType" : null,
+      "type" : "boolean",
+      "wmServiceOperationInfo" : {
+        "name" : "deleteWorkers",
+        "methodType" : "delete",
+        "relativePath" : "/pump_man/Workers/{workerName}",
+        "directPath" : null,
+        "httpMethod" : "delete",
+        "parameters" : [ {
+          "name" : "workerName",
+          "parameterType" : "path",
+          "required" : true,
+          "type" : "java.lang.String",
+          "readOnly" : false,
+          "contentType" : null
+        } ],
+        "definitions" : { },
+        "produces" : null,
+        "consumes" : null,
+        "proxySettings" : {
+          "web" : true,
+          "mobile" : true,
+          "withCredentials" : false
+        },
+        "securityDefinitions" : [ ]
+      }
+    },
+    "ShiftsController_findShifts" : {
+      "id" : "ShiftsController_findShifts",
+      "crudOperationId" : null,
+      "service" : "pump_man",
+      "controller" : "ShiftsController",
+      "operationType" : null,
+      "type" : "org.springframework.data.domain.Page",
+      "wmServiceOperationInfo" : {
+        "name" : "findShifts",
+        "methodType" : "get",
+        "relativePath" : "/pump_man/Shifts",
+        "directPath" : null,
+        "httpMethod" : "get",
+        "parameters" : [ {
+          "name" : "q",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "java.lang.String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "page",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "size",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "sort",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "String",
+          "readOnly" : false,
+          "contentType" : null
+        } ],
+        "definitions" : { },
+        "produces" : null,
+        "consumes" : null,
+        "proxySettings" : {
+          "web" : true,
+          "mobile" : true,
+          "withCredentials" : false
+        },
+        "securityDefinitions" : [ ]
+      }
+    },
+    "ShiftDetailsController_exportShiftDetails" : {
+      "id" : "ShiftDetailsController_exportShiftDetails",
+      "crudOperationId" : null,
+      "service" : "pump_man",
+      "controller" : "ShiftDetailsController",
+      "operationType" : null,
+      "type" : "com.wavemaker.runtime.commons.file.model.Downloadable",
+      "wmServiceOperationInfo" : {
+        "name" : "exportShiftDetails",
+        "methodType" : "get",
+        "relativePath" : "/pump_man/ShiftDetails/export/{exportType}",
+        "directPath" : null,
+        "httpMethod" : "get",
+        "parameters" : [ {
+          "name" : "exportType",
+          "parameterType" : "path",
+          "required" : true,
+          "type" : "com.wavemaker.runtime.data.export.ExportType",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "q",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "java.lang.String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "page",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "size",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "sort",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "String",
+          "readOnly" : false,
+          "contentType" : null
+        } ],
+        "definitions" : { },
+        "produces" : [ "application/octet-stream" ],
+        "consumes" : null,
+        "proxySettings" : {
+          "web" : true,
+          "mobile" : true,
+          "withCredentials" : false
+        },
+        "securityDefinitions" : [ ]
+      }
+    },
+    "SecurityController_isSecurityEnabled" : {
+      "id" : "SecurityController_isSecurityEnabled",
+      "crudOperationId" : null,
+      "service" : "securityService",
+      "controller" : "SecurityController",
+      "operationType" : null,
+      "type" : "com.wavemaker.commons.wrapper.StringWrapper",
+      "wmServiceOperationInfo" : {
+        "name" : "isSecurityEnabled",
+        "methodType" : "get",
+        "relativePath" : "/security/enabled",
+        "directPath" : null,
+        "httpMethod" : "get",
+        "parameters" : [ ],
+        "definitions" : { },
+        "produces" : null,
+        "consumes" : null,
+        "proxySettings" : {
+          "web" : true,
+          "mobile" : true,
+          "withCredentials" : false
+        },
+        "securityDefinitions" : [ ]
+      }
+    },
+    "ShiftCollectionController_createShiftCollection" : {
+      "id" : "ShiftCollectionController_createShiftCollection",
+      "crudOperationId" : null,
+      "service" : "pump_man",
+      "controller" : "ShiftCollectionController",
+      "operationType" : null,
+      "type" : "com.pumpman.pump_man.ShiftCollection",
+      "wmServiceOperationInfo" : {
+        "name" : "createShiftCollection",
+        "methodType" : "post",
+        "relativePath" : "/pump_man/ShiftCollection",
+        "directPath" : null,
+        "httpMethod" : "post",
+        "parameters" : [ {
+          "name" : "ShiftCollection",
+          "parameterType" : "body",
+          "required" : true,
+          "type" : "com.pumpman.pump_man.ShiftCollection",
+          "readOnly" : false,
+          "contentType" : null
+        } ],
+        "definitions" : {
+          "com.pumpman.pump_man.ShiftCollection" : [ {
+            "name" : "paymentAmount",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.lang.Double",
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "collectionId",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.lang.Integer",
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "paymentType",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.lang.String",
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "shifts",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "com.pumpman.pump_man.Shifts",
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "lastModifiedAt",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.sql.Timestamp",
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "shiftId",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.lang.Integer",
+            "readOnly" : false,
+            "contentType" : null
+          } ]
+        },
+        "produces" : null,
+        "consumes" : null,
+        "proxySettings" : {
+          "web" : true,
+          "mobile" : true,
+          "withCredentials" : false
+        },
+        "securityDefinitions" : [ ]
+      }
+    },
+    "ShiftCollectionController_getShiftCollection" : {
+      "id" : "ShiftCollectionController_getShiftCollection",
+      "crudOperationId" : null,
+      "service" : "pump_man",
+      "controller" : "ShiftCollectionController",
+      "operationType" : null,
+      "type" : "com.pumpman.pump_man.ShiftCollection",
+      "wmServiceOperationInfo" : {
+        "name" : "getShiftCollection",
+        "methodType" : "get",
+        "relativePath" : "/pump_man/ShiftCollection/{collectionId}",
+        "directPath" : null,
+        "httpMethod" : "get",
+        "parameters" : [ {
+          "name" : "collectionId",
+          "parameterType" : "path",
+          "required" : true,
+          "type" : "java.lang.Integer",
+          "readOnly" : false,
+          "contentType" : null
+        } ],
+        "definitions" : { },
+        "produces" : null,
+        "consumes" : null,
+        "proxySettings" : {
+          "web" : true,
+          "mobile" : true,
+          "withCredentials" : false
+        },
+        "securityDefinitions" : [ ]
+      }
+    },
+    "SecurityController_getLoggedInUser" : {
+      "id" : "SecurityController_getLoggedInUser",
+      "crudOperationId" : null,
+      "service" : "securityService",
+      "controller" : "SecurityController",
+      "operationType" : null,
+      "type" : "com.wavemaker.runtime.security.WMCurrentUser",
+      "wmServiceOperationInfo" : {
+        "name" : "getLoggedInUser",
+        "methodType" : "get",
+        "relativePath" : "/security/user",
+        "directPath" : null,
+        "httpMethod" : "get",
+        "parameters" : [ ],
+        "definitions" : { },
+        "produces" : null,
+        "consumes" : null,
+        "proxySettings" : {
+          "web" : true,
+          "mobile" : true,
+          "withCredentials" : false
+        },
+        "securityDefinitions" : [ ]
+      }
+    },
+    "WorkersController_getWorkers" : {
+      "id" : "WorkersController_getWorkers",
+      "crudOperationId" : null,
+      "service" : "pump_man",
+      "controller" : "WorkersController",
+      "operationType" : null,
+      "type" : "com.pumpman.pump_man.Workers",
+      "wmServiceOperationInfo" : {
+        "name" : "getWorkers",
+        "methodType" : "get",
+        "relativePath" : "/pump_man/Workers/{workerName}",
+        "directPath" : null,
+        "httpMethod" : "get",
+        "parameters" : [ {
+          "name" : "workerName",
+          "parameterType" : "path",
+          "required" : true,
+          "type" : "java.lang.String",
+          "readOnly" : false,
+          "contentType" : null
+        } ],
+        "definitions" : { },
+        "produces" : null,
+        "consumes" : null,
+        "proxySettings" : {
+          "web" : true,
+          "mobile" : true,
+          "withCredentials" : false
+        },
+        "securityDefinitions" : [ ]
+      }
+    },
+    "ShiftDetailsController_createShiftDetails" : {
+      "id" : "ShiftDetailsController_createShiftDetails",
+      "crudOperationId" : null,
+      "service" : "pump_man",
+      "controller" : "ShiftDetailsController",
+      "operationType" : null,
+      "type" : "com.pumpman.pump_man.ShiftDetails",
+      "wmServiceOperationInfo" : {
+        "name" : "createShiftDetails",
+        "methodType" : "post",
+        "relativePath" : "/pump_man/ShiftDetails",
+        "directPath" : null,
+        "httpMethod" : "post",
+        "parameters" : [ {
+          "name" : "ShiftDetails",
+          "parameterType" : "body",
+          "required" : true,
+          "type" : "com.pumpman.pump_man.ShiftDetails",
+          "readOnly" : false,
+          "contentType" : null
+        } ],
+        "definitions" : {
+          "com.pumpman.pump_man.ShiftDetails" : [ {
+            "name" : "fuelType",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.lang.String",
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "fuelStartReading",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.lang.Double",
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "fuelEndReading",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.lang.Double",
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "shifts",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "com.pumpman.pump_man.Shifts",
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "lastModifiedAt",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.sql.Timestamp",
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "shiftId",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.lang.Integer",
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "totalAmount",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.lang.Double",
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "fuelPrice",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.lang.Double",
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "createdAt",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.sql.Timestamp",
+            "readOnly" : false,
+            "contentType" : null
+          } ]
+        },
+        "produces" : null,
+        "consumes" : null,
+        "proxySettings" : {
+          "web" : true,
+          "mobile" : true,
+          "withCredentials" : false
+        },
+        "securityDefinitions" : [ ]
+      }
+    },
+    "WorkersController_editWorkers_1" : {
+      "id" : "WorkersController_editWorkers_1",
+      "crudOperationId" : null,
+      "service" : "pump_man",
+      "controller" : "WorkersController",
+      "operationType" : null,
+      "type" : "com.pumpman.pump_man.Workers",
+      "wmServiceOperationInfo" : {
+        "name" : "editWorkers",
+        "methodType" : "put",
+        "relativePath" : "/pump_man/Workers/{workerName}",
+        "directPath" : null,
+        "httpMethod" : "put",
+        "parameters" : [ {
+          "name" : "workerName",
+          "parameterType" : "path",
+          "required" : true,
+          "type" : "java.lang.String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "Workers",
+          "parameterType" : "body",
+          "required" : true,
+          "type" : "com.pumpman.pump_man.Workers",
+          "readOnly" : false,
+          "contentType" : null
+        } ],
+        "definitions" : {
+          "com.pumpman.pump_man.Workers" : [ {
+            "name" : "active",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.lang.Boolean",
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "workerName",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.lang.String",
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "image",
+            "parameterType" : null,
+            "required" : false,
+            "type" : null,
+            "readOnly" : true,
+            "contentType" : null
+          } ]
+        },
+        "produces" : null,
+        "consumes" : null,
+        "proxySettings" : {
+          "web" : true,
+          "mobile" : true,
+          "withCredentials" : false
+        },
+        "securityDefinitions" : [ ]
+      }
+    },
+    "ShiftsController_exportShiftsAndGetURL" : {
+      "id" : "ShiftsController_exportShiftsAndGetURL",
+      "crudOperationId" : null,
+      "service" : "pump_man",
+      "controller" : "ShiftsController",
+      "operationType" : null,
+      "type" : "com.wavemaker.commons.wrapper.StringWrapper",
+      "wmServiceOperationInfo" : {
+        "name" : "exportShiftsAndGetURL",
+        "methodType" : "post",
+        "relativePath" : "/pump_man/Shifts/export",
+        "directPath" : null,
+        "httpMethod" : "post",
+        "parameters" : [ {
+          "name" : "DataExportOptions",
+          "parameterType" : "body",
+          "required" : true,
+          "type" : "com.wavemaker.runtime.data.export.DataExportOptions",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "page",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "size",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "sort",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "String",
+          "readOnly" : false,
+          "contentType" : null
+        } ],
+        "definitions" : { },
+        "produces" : null,
+        "consumes" : [ "application/json" ],
+        "proxySettings" : {
+          "web" : true,
+          "mobile" : true,
+          "withCredentials" : false
+        },
+        "securityDefinitions" : [ ]
+      }
+    },
+    "ShiftsController_searchShiftsByQueryFilters" : {
+      "id" : "ShiftsController_searchShiftsByQueryFilters",
+      "crudOperationId" : null,
+      "service" : "pump_man",
+      "controller" : "ShiftsController",
+      "operationType" : null,
+      "type" : "org.springframework.data.domain.Page",
+      "wmServiceOperationInfo" : {
+        "name" : "searchShiftsByQueryFilters",
+        "methodType" : "post",
+        "relativePath" : "/pump_man/Shifts/search",
+        "directPath" : null,
+        "httpMethod" : "post",
+        "parameters" : [ {
+          "name" : "page",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "size",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "sort",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "QueryFilter",
+          "parameterType" : "body",
+          "required" : true,
+          "type" : "com.wavemaker.runtime.data.expression.QueryFilter",
+          "readOnly" : false,
+          "contentType" : null
+        } ],
+        "definitions" : {
+          "com.wavemaker.runtime.data.expression.QueryFilter" : [ {
+            "name" : "attributeType",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.lang.String",
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "attributeName",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.lang.String",
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "attributeValue",
+            "parameterType" : null,
+            "required" : false,
+            "type" : null,
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "filterCondition",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.lang.String",
+            "readOnly" : false,
+            "contentType" : null
+          } ]
+        },
+        "produces" : null,
+        "consumes" : null,
+        "proxySettings" : {
+          "web" : true,
+          "mobile" : true,
+          "withCredentials" : false
+        },
+        "securityDefinitions" : [ ]
+      }
+    },
+    "ShiftsController_getShifts" : {
+      "id" : "ShiftsController_getShifts",
+      "crudOperationId" : null,
+      "service" : "pump_man",
+      "controller" : "ShiftsController",
+      "operationType" : null,
+      "type" : "com.pumpman.pump_man.Shifts",
+      "wmServiceOperationInfo" : {
+        "name" : "getShifts",
+        "methodType" : "get",
+        "relativePath" : "/pump_man/Shifts/{id}",
+        "directPath" : null,
+        "httpMethod" : "get",
+        "parameters" : [ {
+          "name" : "id",
+          "parameterType" : "path",
+          "required" : true,
+          "type" : "java.lang.Integer",
+          "readOnly" : false,
+          "contentType" : null
+        } ],
+        "definitions" : { },
+        "produces" : null,
+        "consumes" : null,
+        "proxySettings" : {
+          "web" : true,
+          "mobile" : true,
+          "withCredentials" : false
+        },
+        "securityDefinitions" : [ ]
+      }
+    },
+    "ShiftsController_editShifts" : {
+      "id" : "ShiftsController_editShifts",
+      "crudOperationId" : null,
+      "service" : "pump_man",
+      "controller" : "ShiftsController",
+      "operationType" : null,
+      "type" : "com.pumpman.pump_man.Shifts",
+      "wmServiceOperationInfo" : {
+        "name" : "editShifts",
+        "methodType" : "put",
+        "relativePath" : "/pump_man/Shifts/{id}",
+        "directPath" : null,
+        "httpMethod" : "put",
+        "parameters" : [ {
+          "name" : "id",
+          "parameterType" : "path",
+          "required" : true,
+          "type" : "java.lang.Integer",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "Shifts",
+          "parameterType" : "body",
+          "required" : true,
+          "type" : "com.pumpman.pump_man.Shifts",
+          "readOnly" : false,
+          "contentType" : null
+        } ],
+        "definitions" : {
+          "com.pumpman.pump_man.Shifts" : [ {
+            "name" : "shiftWorker",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.lang.String",
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "id",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.lang.Integer",
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "lastModifiedAt",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.sql.Timestamp",
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "shiftStartTime",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.time.LocalDateTime",
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "shiftEndTime",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.time.LocalDateTime",
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "createdAt",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.sql.Timestamp",
+            "readOnly" : false,
+            "contentType" : null
+          } ]
+        },
+        "produces" : null,
+        "consumes" : null,
+        "proxySettings" : {
+          "web" : true,
+          "mobile" : true,
+          "withCredentials" : false
+        },
+        "securityDefinitions" : [ ]
+      }
+    },
+    "SecurityController_ssoLogin" : {
+      "id" : "SecurityController_ssoLogin",
+      "crudOperationId" : null,
+      "service" : "securityService",
+      "controller" : "SecurityController",
+      "operationType" : null,
+      "type" : "object",
+      "wmServiceOperationInfo" : {
+        "name" : "ssoLogin",
+        "methodType" : "get",
+        "relativePath" : "/security/ssologin",
+        "directPath" : null,
+        "httpMethod" : "get",
+        "parameters" : [ ],
+        "definitions" : { },
+        "produces" : null,
+        "consumes" : null,
+        "proxySettings" : {
+          "web" : true,
+          "mobile" : true,
+          "withCredentials" : false
+        },
+        "securityDefinitions" : [ ]
+      }
+    },
+    "SecurityController_getLoginTime" : {
+      "id" : "SecurityController_getLoginTime",
+      "crudOperationId" : null,
+      "service" : "securityService",
+      "controller" : "SecurityController",
+      "operationType" : null,
+      "type" : "com.wavemaker.commons.wrapper.StringWrapper",
+      "wmServiceOperationInfo" : {
+        "name" : "getLoginTime",
+        "methodType" : "get",
+        "relativePath" : "/security/user/login_time",
+        "directPath" : null,
+        "httpMethod" : "get",
+        "parameters" : [ ],
+        "definitions" : { },
+        "produces" : null,
+        "consumes" : null,
+        "proxySettings" : {
+          "web" : true,
+          "mobile" : true,
+          "withCredentials" : false
+        },
+        "securityDefinitions" : [ ]
+      }
+    },
+    "ShiftCollectionController_findShiftCollections" : {
+      "id" : "ShiftCollectionController_findShiftCollections",
+      "crudOperationId" : null,
+      "service" : "pump_man",
+      "controller" : "ShiftCollectionController",
+      "operationType" : null,
+      "type" : "org.springframework.data.domain.Page",
+      "wmServiceOperationInfo" : {
+        "name" : "findShiftCollections",
+        "methodType" : "get",
+        "relativePath" : "/pump_man/ShiftCollection",
+        "directPath" : null,
+        "httpMethod" : "get",
+        "parameters" : [ {
+          "name" : "q",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "java.lang.String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "page",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "size",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "sort",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "String",
+          "readOnly" : false,
+          "contentType" : null
+        } ],
+        "definitions" : { },
+        "produces" : null,
+        "consumes" : null,
+        "proxySettings" : {
+          "web" : true,
+          "mobile" : true,
+          "withCredentials" : false
+        },
+        "securityDefinitions" : [ ]
+      }
+    },
+    "ShiftCollectionController_filterShiftCollections" : {
+      "id" : "ShiftCollectionController_filterShiftCollections",
+      "crudOperationId" : null,
+      "service" : "pump_man",
+      "controller" : "ShiftCollectionController",
+      "operationType" : null,
+      "type" : "org.springframework.data.domain.Page",
+      "wmServiceOperationInfo" : {
+        "name" : "filterShiftCollections",
+        "methodType" : "post",
+        "relativePath" : "/pump_man/ShiftCollection/filter",
+        "directPath" : null,
+        "httpMethod" : "post",
+        "parameters" : [ {
+          "name" : "q",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "java.lang.String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "page",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "size",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "sort",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "String",
+          "readOnly" : false,
+          "contentType" : null
+        } ],
+        "definitions" : { },
+        "produces" : null,
+        "consumes" : [ "application/x-www-form-urlencoded" ],
+        "proxySettings" : {
+          "web" : true,
+          "mobile" : true,
+          "withCredentials" : false
+        },
+        "securityDefinitions" : [ ]
+      }
+    },
+    "ShiftDetailsController_exportShiftDetailsAndGetURL" : {
+      "id" : "ShiftDetailsController_exportShiftDetailsAndGetURL",
+      "crudOperationId" : null,
+      "service" : "pump_man",
+      "controller" : "ShiftDetailsController",
+      "operationType" : null,
+      "type" : "com.wavemaker.commons.wrapper.StringWrapper",
+      "wmServiceOperationInfo" : {
+        "name" : "exportShiftDetailsAndGetURL",
+        "methodType" : "post",
+        "relativePath" : "/pump_man/ShiftDetails/export",
+        "directPath" : null,
+        "httpMethod" : "post",
+        "parameters" : [ {
+          "name" : "DataExportOptions",
+          "parameterType" : "body",
+          "required" : true,
+          "type" : "com.wavemaker.runtime.data.export.DataExportOptions",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "page",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "size",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "sort",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "String",
+          "readOnly" : false,
+          "contentType" : null
+        } ],
+        "definitions" : { },
+        "produces" : null,
+        "consumes" : [ "application/json" ],
+        "proxySettings" : {
+          "web" : true,
+          "mobile" : true,
+          "withCredentials" : false
+        },
+        "securityDefinitions" : [ ]
+      }
+    },
+    "SecurityController_getUserId" : {
+      "id" : "SecurityController_getUserId",
+      "crudOperationId" : null,
+      "service" : "securityService",
+      "controller" : "SecurityController",
+      "operationType" : null,
+      "type" : "com.wavemaker.commons.wrapper.StringWrapper",
+      "wmServiceOperationInfo" : {
+        "name" : "getUserId",
+        "methodType" : "get",
+        "relativePath" : "/security/user/userid",
+        "directPath" : null,
+        "httpMethod" : "get",
+        "parameters" : [ ],
+        "definitions" : { },
+        "produces" : null,
+        "consumes" : null,
+        "proxySettings" : {
+          "web" : true,
+          "mobile" : true,
+          "withCredentials" : false
+        },
+        "securityDefinitions" : [ ]
+      }
+    },
+    "ShiftsController_getShiftsAggregatedValues" : {
+      "id" : "ShiftsController_getShiftsAggregatedValues",
+      "crudOperationId" : null,
+      "service" : "pump_man",
+      "controller" : "ShiftsController",
+      "operationType" : null,
+      "type" : "org.springframework.data.domain.Page",
+      "wmServiceOperationInfo" : {
+        "name" : "getShiftsAggregatedValues",
+        "methodType" : "post",
+        "relativePath" : "/pump_man/Shifts/aggregations",
+        "directPath" : null,
+        "httpMethod" : "post",
+        "parameters" : [ {
+          "name" : "AggregationInfo",
+          "parameterType" : "body",
+          "required" : true,
+          "type" : "com.wavemaker.runtime.data.model.AggregationInfo",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "page",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "size",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "sort",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "String",
+          "readOnly" : false,
+          "contentType" : null
+        } ],
+        "definitions" : {
+          "com.wavemaker.runtime.data.model.AggregationInfo" : [ {
+            "name" : "filter",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.lang.String",
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "groupByFields",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.util.List",
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "aggregations",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.util.List",
+            "readOnly" : false,
+            "contentType" : null
+          } ]
+        },
+        "produces" : null,
+        "consumes" : null,
+        "proxySettings" : {
+          "web" : true,
+          "mobile" : true,
+          "withCredentials" : false
+        },
+        "securityDefinitions" : [ ]
+      }
+    },
+    "WorkersController_getWorkersAggregatedValues" : {
+      "id" : "WorkersController_getWorkersAggregatedValues",
+      "crudOperationId" : null,
+      "service" : "pump_man",
+      "controller" : "WorkersController",
+      "operationType" : null,
+      "type" : "org.springframework.data.domain.Page",
+      "wmServiceOperationInfo" : {
+        "name" : "getWorkersAggregatedValues",
+        "methodType" : "post",
+        "relativePath" : "/pump_man/Workers/aggregations",
+        "directPath" : null,
+        "httpMethod" : "post",
+        "parameters" : [ {
+          "name" : "AggregationInfo",
+          "parameterType" : "body",
+          "required" : true,
+          "type" : "com.wavemaker.runtime.data.model.AggregationInfo",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "page",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "size",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "sort",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "String",
+          "readOnly" : false,
+          "contentType" : null
+        } ],
+        "definitions" : {
+          "com.wavemaker.runtime.data.model.AggregationInfo" : [ {
+            "name" : "filter",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.lang.String",
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "groupByFields",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.util.List",
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "aggregations",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.util.List",
+            "readOnly" : false,
+            "contentType" : null
+          } ]
+        },
+        "produces" : null,
+        "consumes" : null,
+        "proxySettings" : {
+          "web" : true,
+          "mobile" : true,
+          "withCredentials" : false
+        },
+        "securityDefinitions" : [ ]
+      }
+    },
+    "ShiftDetailsController_deleteShiftDetails" : {
+      "id" : "ShiftDetailsController_deleteShiftDetails",
+      "crudOperationId" : null,
+      "service" : "pump_man",
+      "controller" : "ShiftDetailsController",
+      "operationType" : null,
+      "type" : "boolean",
+      "wmServiceOperationInfo" : {
+        "name" : "deleteShiftDetails",
+        "methodType" : "delete",
+        "relativePath" : "/pump_man/ShiftDetails/composite-id",
+        "directPath" : null,
+        "httpMethod" : "delete",
+        "parameters" : [ {
+          "name" : "shiftId",
+          "parameterType" : "query",
+          "required" : true,
+          "type" : "java.lang.Integer",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "fuelType",
+          "parameterType" : "query",
+          "required" : true,
+          "type" : "java.lang.String",
+          "readOnly" : false,
+          "contentType" : null
+        } ],
+        "definitions" : { },
+        "produces" : null,
+        "consumes" : null,
+        "proxySettings" : {
+          "web" : true,
+          "mobile" : true,
+          "withCredentials" : false
+        },
+        "securityDefinitions" : [ ]
+      }
+    },
+    "ShiftDetailsController_filterShiftDetails" : {
+      "id" : "ShiftDetailsController_filterShiftDetails",
+      "crudOperationId" : null,
+      "service" : "pump_man",
+      "controller" : "ShiftDetailsController",
+      "operationType" : null,
+      "type" : "org.springframework.data.domain.Page",
+      "wmServiceOperationInfo" : {
+        "name" : "filterShiftDetails",
+        "methodType" : "post",
+        "relativePath" : "/pump_man/ShiftDetails/filter",
+        "directPath" : null,
+        "httpMethod" : "post",
+        "parameters" : [ {
+          "name" : "q",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "java.lang.String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "page",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "size",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "sort",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "String",
+          "readOnly" : false,
+          "contentType" : null
+        } ],
+        "definitions" : { },
+        "produces" : null,
+        "consumes" : [ "application/x-www-form-urlencoded" ],
+        "proxySettings" : {
+          "web" : true,
+          "mobile" : true,
+          "withCredentials" : false
+        },
+        "securityDefinitions" : [ ]
+      }
+    },
+    "ShiftCollectionController_countShiftCollections" : {
+      "id" : "ShiftCollectionController_countShiftCollections",
+      "crudOperationId" : null,
+      "service" : "pump_man",
+      "controller" : "ShiftCollectionController",
+      "operationType" : null,
+      "type" : "integer",
+      "wmServiceOperationInfo" : {
+        "name" : "countShiftCollections",
+        "methodType" : "get",
+        "relativePath" : "/pump_man/ShiftCollection/count",
+        "directPath" : null,
+        "httpMethod" : "get",
+        "parameters" : [ {
+          "name" : "q",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "java.lang.String",
+          "readOnly" : false,
+          "contentType" : null
+        } ],
+        "definitions" : { },
+        "produces" : null,
+        "consumes" : null,
+        "proxySettings" : {
+          "web" : true,
+          "mobile" : true,
+          "withCredentials" : false
+        },
+        "securityDefinitions" : [ ]
+      }
+    },
+    "ShiftCollectionController_exportShiftCollections" : {
+      "id" : "ShiftCollectionController_exportShiftCollections",
+      "crudOperationId" : null,
+      "service" : "pump_man",
+      "controller" : "ShiftCollectionController",
+      "operationType" : null,
+      "type" : "com.wavemaker.runtime.commons.file.model.Downloadable",
+      "wmServiceOperationInfo" : {
+        "name" : "exportShiftCollections",
+        "methodType" : "get",
+        "relativePath" : "/pump_man/ShiftCollection/export/{exportType}",
+        "directPath" : null,
+        "httpMethod" : "get",
+        "parameters" : [ {
+          "name" : "exportType",
+          "parameterType" : "path",
+          "required" : true,
+          "type" : "com.wavemaker.runtime.data.export.ExportType",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "q",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "java.lang.String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "page",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "size",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "sort",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "String",
+          "readOnly" : false,
+          "contentType" : null
+        } ],
+        "definitions" : { },
+        "produces" : [ "application/octet-stream" ],
+        "consumes" : null,
+        "proxySettings" : {
+          "web" : true,
+          "mobile" : true,
+          "withCredentials" : false
+        },
+        "securityDefinitions" : [ ]
+      }
+    },
+    "ShiftCollectionController_patchShiftCollection" : {
+      "id" : "ShiftCollectionController_patchShiftCollection",
+      "crudOperationId" : null,
+      "service" : "pump_man",
+      "controller" : "ShiftCollectionController",
+      "operationType" : null,
+      "type" : "com.pumpman.pump_man.ShiftCollection",
+      "wmServiceOperationInfo" : {
+        "name" : "patchShiftCollection",
+        "methodType" : "patch",
+        "relativePath" : "/pump_man/ShiftCollection/{collectionId}",
+        "directPath" : null,
+        "httpMethod" : "patch",
+        "parameters" : [ {
+          "name" : "collectionId",
+          "parameterType" : "path",
+          "required" : true,
+          "type" : "java.lang.Integer",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "ShiftCollection",
+          "parameterType" : "body",
+          "required" : true,
+          "type" : "com.pumpman.pump_man.ShiftCollection",
+          "readOnly" : false,
+          "contentType" : null
+        } ],
+        "definitions" : {
+          "com.pumpman.pump_man.ShiftCollection" : [ {
+            "name" : "paymentAmount",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.lang.Double",
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "collectionId",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.lang.Integer",
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "paymentType",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.lang.String",
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "shifts",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "com.pumpman.pump_man.Shifts",
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "lastModifiedAt",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.sql.Timestamp",
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "shiftId",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.lang.Integer",
+            "readOnly" : false,
+            "contentType" : null
+          } ]
+        },
+        "produces" : null,
+        "consumes" : null,
+        "proxySettings" : {
+          "web" : true,
+          "mobile" : true,
+          "withCredentials" : false
+        },
+        "securityDefinitions" : [ ]
+      }
+    },
+    "ShiftCollectionController_getShiftCollectionAggregatedValues" : {
+      "id" : "ShiftCollectionController_getShiftCollectionAggregatedValues",
+      "crudOperationId" : null,
+      "service" : "pump_man",
+      "controller" : "ShiftCollectionController",
+      "operationType" : null,
+      "type" : "org.springframework.data.domain.Page",
+      "wmServiceOperationInfo" : {
+        "name" : "getShiftCollectionAggregatedValues",
+        "methodType" : "post",
+        "relativePath" : "/pump_man/ShiftCollection/aggregations",
+        "directPath" : null,
+        "httpMethod" : "post",
+        "parameters" : [ {
+          "name" : "AggregationInfo",
+          "parameterType" : "body",
+          "required" : true,
+          "type" : "com.wavemaker.runtime.data.model.AggregationInfo",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "page",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "size",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "sort",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "String",
+          "readOnly" : false,
+          "contentType" : null
+        } ],
+        "definitions" : {
+          "com.wavemaker.runtime.data.model.AggregationInfo" : [ {
+            "name" : "filter",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.lang.String",
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "groupByFields",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.util.List",
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "aggregations",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.util.List",
+            "readOnly" : false,
+            "contentType" : null
+          } ]
+        },
+        "produces" : null,
+        "consumes" : null,
+        "proxySettings" : {
+          "web" : true,
+          "mobile" : true,
+          "withCredentials" : false
+        },
+        "securityDefinitions" : [ ]
+      }
+    },
+    "ShiftDetailsController_getShiftDetails" : {
+      "id" : "ShiftDetailsController_getShiftDetails",
+      "crudOperationId" : null,
+      "service" : "pump_man",
+      "controller" : "ShiftDetailsController",
+      "operationType" : null,
+      "type" : "com.pumpman.pump_man.ShiftDetails",
+      "wmServiceOperationInfo" : {
+        "name" : "getShiftDetails",
+        "methodType" : "get",
+        "relativePath" : "/pump_man/ShiftDetails/composite-id",
+        "directPath" : null,
+        "httpMethod" : "get",
+        "parameters" : [ {
+          "name" : "shiftId",
+          "parameterType" : "query",
+          "required" : true,
+          "type" : "java.lang.Integer",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "fuelType",
+          "parameterType" : "query",
+          "required" : true,
+          "type" : "java.lang.String",
+          "readOnly" : false,
+          "contentType" : null
+        } ],
+        "definitions" : { },
+        "produces" : null,
+        "consumes" : null,
+        "proxySettings" : {
+          "web" : true,
+          "mobile" : true,
+          "withCredentials" : false
+        },
+        "securityDefinitions" : [ ]
+      }
+    },
+    "WorkersController_editWorkers" : {
+      "id" : "WorkersController_editWorkers",
+      "crudOperationId" : null,
+      "service" : "pump_man",
+      "controller" : "WorkersController",
+      "operationType" : null,
+      "type" : "com.pumpman.pump_man.Workers",
+      "wmServiceOperationInfo" : {
+        "name" : "editWorkers",
+        "methodType" : "post",
+        "relativePath" : "/pump_man/Workers/{workerName}",
+        "directPath" : null,
+        "httpMethod" : "post",
+        "parameters" : [ {
+          "name" : "workerName",
+          "parameterType" : "path",
+          "required" : true,
+          "type" : "java.lang.String",
+          "readOnly" : false,
+          "contentType" : null
+        } ],
+        "definitions" : { },
+        "produces" : null,
+        "consumes" : [ "multipart/form-data" ],
+        "proxySettings" : {
+          "web" : true,
+          "mobile" : true,
+          "withCredentials" : false
+        },
+        "securityDefinitions" : [ ]
+      }
+    },
+    "SecurityController_isAuthenticated" : {
+      "id" : "SecurityController_isAuthenticated",
+      "crudOperationId" : null,
+      "service" : "securityService",
+      "controller" : "SecurityController",
+      "operationType" : null,
+      "type" : "com.wavemaker.commons.wrapper.BooleanWrapper",
+      "wmServiceOperationInfo" : {
+        "name" : "isAuthenticated",
+        "methodType" : "get",
+        "relativePath" : "/security/user/authenticated",
+        "directPath" : null,
+        "httpMethod" : "get",
+        "parameters" : [ ],
+        "definitions" : { },
+        "produces" : null,
+        "consumes" : null,
+        "proxySettings" : {
+          "web" : true,
+          "mobile" : true,
+          "withCredentials" : false
+        },
+        "securityDefinitions" : [ ]
+      }
+    },
+    "ShiftDetailsController_editShiftDetails" : {
+      "id" : "ShiftDetailsController_editShiftDetails",
+      "crudOperationId" : null,
+      "service" : "pump_man",
+      "controller" : "ShiftDetailsController",
+      "operationType" : null,
+      "type" : "com.pumpman.pump_man.ShiftDetails",
+      "wmServiceOperationInfo" : {
+        "name" : "editShiftDetails",
+        "methodType" : "put",
+        "relativePath" : "/pump_man/ShiftDetails/composite-id",
+        "directPath" : null,
+        "httpMethod" : "put",
+        "parameters" : [ {
+          "name" : "shiftId",
+          "parameterType" : "query",
+          "required" : true,
+          "type" : "java.lang.Integer",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "fuelType",
+          "parameterType" : "query",
+          "required" : true,
+          "type" : "java.lang.String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "ShiftDetails",
+          "parameterType" : "body",
+          "required" : true,
+          "type" : "com.pumpman.pump_man.ShiftDetails",
+          "readOnly" : false,
+          "contentType" : null
+        } ],
+        "definitions" : {
+          "com.pumpman.pump_man.ShiftDetails" : [ {
+            "name" : "fuelType",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.lang.String",
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "fuelStartReading",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.lang.Double",
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "fuelEndReading",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.lang.Double",
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "shifts",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "com.pumpman.pump_man.Shifts",
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "lastModifiedAt",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.sql.Timestamp",
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "shiftId",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.lang.Integer",
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "totalAmount",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.lang.Double",
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "fuelPrice",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.lang.Double",
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "createdAt",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.sql.Timestamp",
+            "readOnly" : false,
+            "contentType" : null
+          } ]
+        },
+        "produces" : null,
+        "consumes" : null,
+        "proxySettings" : {
+          "web" : true,
+          "mobile" : true,
+          "withCredentials" : false
+        },
+        "securityDefinitions" : [ ]
+      }
+    },
+    "WorkersController_filterWorkers" : {
+      "id" : "WorkersController_filterWorkers",
+      "crudOperationId" : null,
+      "service" : "pump_man",
+      "controller" : "WorkersController",
+      "operationType" : null,
+      "type" : "org.springframework.data.domain.Page",
+      "wmServiceOperationInfo" : {
+        "name" : "filterWorkers",
+        "methodType" : "post",
+        "relativePath" : "/pump_man/Workers/filter",
+        "directPath" : null,
+        "httpMethod" : "post",
+        "parameters" : [ {
+          "name" : "q",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "java.lang.String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "page",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "size",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "sort",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "String",
+          "readOnly" : false,
+          "contentType" : null
+        } ],
+        "definitions" : { },
+        "produces" : null,
+        "consumes" : [ "application/x-www-form-urlencoded" ],
+        "proxySettings" : {
+          "web" : true,
+          "mobile" : true,
+          "withCredentials" : false
+        },
+        "securityDefinitions" : [ ]
+      }
+    },
+    "ShiftsController_filterShifts" : {
+      "id" : "ShiftsController_filterShifts",
+      "crudOperationId" : null,
+      "service" : "pump_man",
+      "controller" : "ShiftsController",
+      "operationType" : null,
+      "type" : "org.springframework.data.domain.Page",
+      "wmServiceOperationInfo" : {
+        "name" : "filterShifts",
+        "methodType" : "post",
+        "relativePath" : "/pump_man/Shifts/filter",
+        "directPath" : null,
+        "httpMethod" : "post",
+        "parameters" : [ {
+          "name" : "q",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "java.lang.String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "page",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "size",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "sort",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "String",
+          "readOnly" : false,
+          "contentType" : null
+        } ],
+        "definitions" : { },
+        "produces" : null,
+        "consumes" : [ "application/x-www-form-urlencoded" ],
+        "proxySettings" : {
+          "web" : true,
+          "mobile" : true,
+          "withCredentials" : false
+        },
+        "securityDefinitions" : [ ]
+      }
+    },
+    "ShiftCollectionController_searchShiftCollectionsByQueryFilters" : {
+      "id" : "ShiftCollectionController_searchShiftCollectionsByQueryFilters",
+      "crudOperationId" : null,
+      "service" : "pump_man",
+      "controller" : "ShiftCollectionController",
+      "operationType" : null,
+      "type" : "org.springframework.data.domain.Page",
+      "wmServiceOperationInfo" : {
+        "name" : "searchShiftCollectionsByQueryFilters",
+        "methodType" : "post",
+        "relativePath" : "/pump_man/ShiftCollection/search",
+        "directPath" : null,
+        "httpMethod" : "post",
+        "parameters" : [ {
+          "name" : "page",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "size",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "sort",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "QueryFilter",
+          "parameterType" : "body",
+          "required" : true,
+          "type" : "com.wavemaker.runtime.data.expression.QueryFilter",
+          "readOnly" : false,
+          "contentType" : null
+        } ],
+        "definitions" : {
+          "com.wavemaker.runtime.data.expression.QueryFilter" : [ {
+            "name" : "attributeType",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.lang.String",
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "attributeName",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.lang.String",
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "attributeValue",
+            "parameterType" : null,
+            "required" : false,
+            "type" : null,
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "filterCondition",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.lang.String",
+            "readOnly" : false,
+            "contentType" : null
+          } ]
+        },
+        "produces" : null,
+        "consumes" : null,
+        "proxySettings" : {
+          "web" : true,
+          "mobile" : true,
+          "withCredentials" : false
+        },
+        "securityDefinitions" : [ ]
+      }
+    },
+    "ShiftsController_findAssociatedShiftDetailses" : {
+      "id" : "ShiftsController_findAssociatedShiftDetailses",
+      "crudOperationId" : null,
+      "service" : "pump_man",
+      "controller" : "ShiftsController",
+      "operationType" : null,
+      "type" : "org.springframework.data.domain.Page",
+      "wmServiceOperationInfo" : {
+        "name" : "findAssociatedShiftDetailses",
+        "methodType" : "get",
+        "relativePath" : "/pump_man/Shifts/{id}/shiftDetailses",
+        "directPath" : null,
+        "httpMethod" : "get",
+        "parameters" : [ {
+          "name" : "id",
+          "parameterType" : "path",
+          "required" : true,
+          "type" : "java.lang.Integer",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "page",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "size",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "sort",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "String",
+          "readOnly" : false,
+          "contentType" : null
+        } ],
+        "definitions" : { },
+        "produces" : null,
+        "consumes" : null,
+        "proxySettings" : {
+          "web" : true,
+          "mobile" : true,
+          "withCredentials" : false
+        },
+        "securityDefinitions" : [ ]
+      }
+    },
+    "WorkersController_exportWorkers" : {
+      "id" : "WorkersController_exportWorkers",
+      "crudOperationId" : null,
+      "service" : "pump_man",
+      "controller" : "WorkersController",
+      "operationType" : null,
+      "type" : "com.wavemaker.runtime.commons.file.model.Downloadable",
+      "wmServiceOperationInfo" : {
+        "name" : "exportWorkers",
+        "methodType" : "get",
+        "relativePath" : "/pump_man/Workers/export/{exportType}",
+        "directPath" : null,
+        "httpMethod" : "get",
+        "parameters" : [ {
+          "name" : "exportType",
+          "parameterType" : "path",
+          "required" : true,
+          "type" : "com.wavemaker.runtime.data.export.ExportType",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "q",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "java.lang.String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "page",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "size",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "sort",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "String",
+          "readOnly" : false,
+          "contentType" : null
+        } ],
+        "definitions" : { },
+        "produces" : [ "application/octet-stream" ],
+        "consumes" : null,
+        "proxySettings" : {
+          "web" : true,
+          "mobile" : true,
+          "withCredentials" : false
+        },
+        "securityDefinitions" : [ ]
+      }
+    },
+    "SecurityController_getSecurityInfo" : {
+      "id" : "SecurityController_getSecurityInfo",
+      "crudOperationId" : null,
+      "service" : "securityService",
+      "controller" : "SecurityController",
+      "operationType" : null,
+      "type" : "com.wavemaker.runtime.security.model.SecurityInfo",
+      "wmServiceOperationInfo" : {
+        "name" : "getSecurityInfo",
+        "methodType" : "get",
+        "relativePath" : "/security/info",
+        "directPath" : null,
+        "httpMethod" : "get",
+        "parameters" : [ ],
+        "definitions" : { },
+        "produces" : null,
+        "consumes" : null,
+        "proxySettings" : {
+          "web" : true,
+          "mobile" : true,
+          "withCredentials" : false
+        },
+        "securityDefinitions" : [ ]
+      }
+    },
+    "ShiftCollectionController_exportShiftCollectionsAndGetURL" : {
+      "id" : "ShiftCollectionController_exportShiftCollectionsAndGetURL",
+      "crudOperationId" : null,
+      "service" : "pump_man",
+      "controller" : "ShiftCollectionController",
+      "operationType" : null,
+      "type" : "com.wavemaker.commons.wrapper.StringWrapper",
+      "wmServiceOperationInfo" : {
+        "name" : "exportShiftCollectionsAndGetURL",
+        "methodType" : "post",
+        "relativePath" : "/pump_man/ShiftCollection/export",
+        "directPath" : null,
+        "httpMethod" : "post",
+        "parameters" : [ {
+          "name" : "DataExportOptions",
+          "parameterType" : "body",
+          "required" : true,
+          "type" : "com.wavemaker.runtime.data.export.DataExportOptions",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "page",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "size",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "sort",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "String",
+          "readOnly" : false,
+          "contentType" : null
+        } ],
+        "definitions" : { },
+        "produces" : null,
+        "consumes" : [ "application/json" ],
+        "proxySettings" : {
+          "web" : true,
+          "mobile" : true,
+          "withCredentials" : false
+        },
+        "securityDefinitions" : [ ]
+      }
+    },
+    "SecurityController_getAccessToken" : {
+      "id" : "SecurityController_getAccessToken",
+      "crudOperationId" : null,
+      "service" : "securityService",
+      "controller" : "SecurityController",
+      "operationType" : null,
+      "type" : "com.wavemaker.runtime.security.token.Token",
+      "wmServiceOperationInfo" : {
+        "name" : "getAccessToken",
+        "methodType" : "get",
+        "relativePath" : "/security/token",
+        "directPath" : null,
+        "httpMethod" : "get",
+        "parameters" : [ ],
+        "definitions" : { },
+        "produces" : null,
+        "consumes" : null,
+        "proxySettings" : {
+          "web" : true,
+          "mobile" : true,
+          "withCredentials" : false
+        },
+        "securityDefinitions" : [ ]
+      }
+    },
+    "WorkersController_getWorkersBLOBContent" : {
+      "id" : "WorkersController_getWorkersBLOBContent",
+      "crudOperationId" : null,
+      "service" : "pump_man",
+      "controller" : "WorkersController",
+      "operationType" : null,
+      "type" : "com.wavemaker.runtime.commons.file.model.DownloadResponse",
+      "wmServiceOperationInfo" : {
+        "name" : "getWorkersBLOBContent",
+        "methodType" : "get",
+        "relativePath" : "/pump_man/Workers/{workerName}/content/{fieldName}",
+        "directPath" : null,
+        "httpMethod" : "get",
+        "parameters" : [ {
+          "name" : "workerName",
+          "parameterType" : "path",
+          "required" : true,
+          "type" : "java.lang.String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "fieldName",
+          "parameterType" : "path",
+          "required" : true,
+          "type" : "java.lang.String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "download",
+          "parameterType" : "query",
+          "required" : true,
+          "type" : "boolean",
+          "readOnly" : false,
+          "contentType" : null
+        } ],
+        "definitions" : { },
+        "produces" : [ "application/octet-stream" ],
+        "consumes" : null,
+        "proxySettings" : {
+          "web" : true,
+          "mobile" : true,
+          "withCredentials" : false
+        },
+        "securityDefinitions" : [ ]
+      }
+    },
+    "WorkersController_patchWorkers" : {
+      "id" : "WorkersController_patchWorkers",
+      "crudOperationId" : null,
+      "service" : "pump_man",
+      "controller" : "WorkersController",
+      "operationType" : null,
+      "type" : "com.pumpman.pump_man.Workers",
+      "wmServiceOperationInfo" : {
+        "name" : "patchWorkers",
+        "methodType" : "patch",
+        "relativePath" : "/pump_man/Workers/{workerName}",
+        "directPath" : null,
+        "httpMethod" : "patch",
+        "parameters" : [ {
+          "name" : "workerName",
+          "parameterType" : "path",
+          "required" : true,
+          "type" : "java.lang.String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "Workers",
+          "parameterType" : "body",
+          "required" : true,
+          "type" : "com.pumpman.pump_man.Workers",
+          "readOnly" : false,
+          "contentType" : null
+        } ],
+        "definitions" : {
+          "com.pumpman.pump_man.Workers" : [ {
+            "name" : "active",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.lang.Boolean",
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "workerName",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.lang.String",
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "image",
+            "parameterType" : null,
+            "required" : false,
+            "type" : null,
+            "readOnly" : true,
+            "contentType" : null
+          } ]
+        },
+        "produces" : null,
+        "consumes" : null,
+        "proxySettings" : {
+          "web" : true,
+          "mobile" : true,
+          "withCredentials" : false
+        },
+        "securityDefinitions" : [ ]
+      }
+    },
+    "ShiftDetailsController_patchShiftDetails" : {
+      "id" : "ShiftDetailsController_patchShiftDetails",
+      "crudOperationId" : null,
+      "service" : "pump_man",
+      "controller" : "ShiftDetailsController",
+      "operationType" : null,
+      "type" : "com.pumpman.pump_man.ShiftDetails",
+      "wmServiceOperationInfo" : {
+        "name" : "patchShiftDetails",
+        "methodType" : "patch",
+        "relativePath" : "/pump_man/ShiftDetails/composite-id",
+        "directPath" : null,
+        "httpMethod" : "patch",
+        "parameters" : [ {
+          "name" : "shiftId",
+          "parameterType" : "query",
+          "required" : true,
+          "type" : "java.lang.Integer",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "fuelType",
+          "parameterType" : "query",
+          "required" : true,
+          "type" : "java.lang.String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "ShiftDetails",
+          "parameterType" : "body",
+          "required" : true,
+          "type" : "com.pumpman.pump_man.ShiftDetails",
+          "readOnly" : false,
+          "contentType" : null
+        } ],
+        "definitions" : {
+          "com.pumpman.pump_man.ShiftDetails" : [ {
+            "name" : "fuelType",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.lang.String",
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "fuelStartReading",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.lang.Double",
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "fuelEndReading",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.lang.Double",
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "shifts",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "com.pumpman.pump_man.Shifts",
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "lastModifiedAt",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.sql.Timestamp",
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "shiftId",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.lang.Integer",
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "totalAmount",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.lang.Double",
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "fuelPrice",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.lang.Double",
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "createdAt",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.sql.Timestamp",
+            "readOnly" : false,
+            "contentType" : null
+          } ]
+        },
+        "produces" : null,
+        "consumes" : null,
+        "proxySettings" : {
+          "web" : true,
+          "mobile" : true,
+          "withCredentials" : false
+        },
+        "securityDefinitions" : [ ]
+      }
+    },
+    "ShiftDetailsController_getShiftDetailsAggregatedValues" : {
+      "id" : "ShiftDetailsController_getShiftDetailsAggregatedValues",
+      "crudOperationId" : null,
+      "service" : "pump_man",
+      "controller" : "ShiftDetailsController",
+      "operationType" : null,
+      "type" : "org.springframework.data.domain.Page",
+      "wmServiceOperationInfo" : {
+        "name" : "getShiftDetailsAggregatedValues",
+        "methodType" : "post",
+        "relativePath" : "/pump_man/ShiftDetails/aggregations",
+        "directPath" : null,
+        "httpMethod" : "post",
+        "parameters" : [ {
+          "name" : "AggregationInfo",
+          "parameterType" : "body",
+          "required" : true,
+          "type" : "com.wavemaker.runtime.data.model.AggregationInfo",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "page",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "size",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "sort",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "String",
+          "readOnly" : false,
+          "contentType" : null
+        } ],
+        "definitions" : {
+          "com.wavemaker.runtime.data.model.AggregationInfo" : [ {
+            "name" : "filter",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.lang.String",
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "groupByFields",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.util.List",
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "aggregations",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.util.List",
+            "readOnly" : false,
+            "contentType" : null
+          } ]
+        },
+        "produces" : null,
+        "consumes" : null,
+        "proxySettings" : {
+          "web" : true,
+          "mobile" : true,
+          "withCredentials" : false
+        },
+        "securityDefinitions" : [ ]
+      }
+    },
+    "ShiftsController_countShifts" : {
+      "id" : "ShiftsController_countShifts",
+      "crudOperationId" : null,
+      "service" : "pump_man",
+      "controller" : "ShiftsController",
+      "operationType" : null,
+      "type" : "integer",
+      "wmServiceOperationInfo" : {
+        "name" : "countShifts",
+        "methodType" : "get",
+        "relativePath" : "/pump_man/Shifts/count",
+        "directPath" : null,
+        "httpMethod" : "get",
+        "parameters" : [ {
+          "name" : "q",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "java.lang.String",
+          "readOnly" : false,
+          "contentType" : null
+        } ],
+        "definitions" : { },
+        "produces" : null,
+        "consumes" : null,
+        "proxySettings" : {
+          "web" : true,
+          "mobile" : true,
+          "withCredentials" : false
+        },
+        "securityDefinitions" : [ ]
+      }
+    },
+    "ShiftsController_deleteShifts" : {
+      "id" : "ShiftsController_deleteShifts",
+      "crudOperationId" : null,
+      "service" : "pump_man",
+      "controller" : "ShiftsController",
+      "operationType" : null,
+      "type" : "boolean",
+      "wmServiceOperationInfo" : {
+        "name" : "deleteShifts",
+        "methodType" : "delete",
+        "relativePath" : "/pump_man/Shifts/{id}",
+        "directPath" : null,
+        "httpMethod" : "delete",
+        "parameters" : [ {
+          "name" : "id",
+          "parameterType" : "path",
+          "required" : true,
+          "type" : "java.lang.Integer",
+          "readOnly" : false,
+          "contentType" : null
+        } ],
+        "definitions" : { },
+        "produces" : null,
+        "consumes" : null,
+        "proxySettings" : {
+          "web" : true,
+          "mobile" : true,
+          "withCredentials" : false
+        },
+        "securityDefinitions" : [ ]
+      }
+    },
+    "ShiftsController_exportShifts" : {
+      "id" : "ShiftsController_exportShifts",
+      "crudOperationId" : null,
+      "service" : "pump_man",
+      "controller" : "ShiftsController",
+      "operationType" : null,
+      "type" : "com.wavemaker.runtime.commons.file.model.Downloadable",
+      "wmServiceOperationInfo" : {
+        "name" : "exportShifts",
+        "methodType" : "get",
+        "relativePath" : "/pump_man/Shifts/export/{exportType}",
+        "directPath" : null,
+        "httpMethod" : "get",
+        "parameters" : [ {
+          "name" : "exportType",
+          "parameterType" : "path",
+          "required" : true,
+          "type" : "com.wavemaker.runtime.data.export.ExportType",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "q",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "java.lang.String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "page",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "size",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "String",
+          "readOnly" : false,
+          "contentType" : null
+        }, {
+          "name" : "sort",
+          "parameterType" : "query",
+          "required" : false,
+          "type" : "String",
+          "readOnly" : false,
+          "contentType" : null
+        } ],
+        "definitions" : { },
+        "produces" : [ "application/octet-stream" ],
+        "consumes" : null,
+        "proxySettings" : {
+          "web" : true,
+          "mobile" : true,
+          "withCredentials" : false
+        },
+        "securityDefinitions" : [ ]
+      }
+    },
+    "WorkersController_createWorkers" : {
+      "id" : "WorkersController_createWorkers",
+      "crudOperationId" : null,
+      "service" : "pump_man",
+      "controller" : "WorkersController",
+      "operationType" : null,
+      "type" : "com.pumpman.pump_man.Workers",
+      "wmServiceOperationInfo" : {
+        "name" : "createWorkers",
+        "methodType" : "post",
+        "relativePath" : "/pump_man/Workers",
+        "directPath" : null,
+        "httpMethod" : "post",
+        "parameters" : [ {
+          "name" : "wm_data_json",
+          "parameterType" : "formData",
+          "required" : true,
+          "type" : "com.pumpman.pump_man.Workers",
+          "readOnly" : false,
+          "contentType" : "application/json"
+        }, {
+          "name" : "image",
+          "parameterType" : "formData",
+          "required" : false,
+          "type" : "file",
+          "readOnly" : false,
+          "contentType" : null
+        } ],
+        "definitions" : {
+          "org.springframework.web.multipart.MultipartFile" : [ {
+            "name" : "name",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.lang.String",
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "size",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.lang.Long",
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "inputStream",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.io.InputStream",
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "contentType",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.lang.String",
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "empty",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.lang.Boolean",
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "resource",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "org.springframework.core.io.Resource",
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "originalFilename",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.lang.String",
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "bytes",
+            "parameterType" : null,
+            "required" : false,
+            "type" : null,
+            "readOnly" : false,
+            "contentType" : null
+          } ],
+          "com.pumpman.pump_man.Workers" : [ {
+            "name" : "active",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.lang.Boolean",
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "workerName",
+            "parameterType" : null,
+            "required" : false,
+            "type" : "java.lang.String",
+            "readOnly" : false,
+            "contentType" : null
+          }, {
+            "name" : "image",
+            "parameterType" : null,
+            "required" : false,
+            "type" : null,
+            "readOnly" : true,
+            "contentType" : null
+          } ]
+        },
+        "produces" : null,
+        "consumes" : [ "multipart/form-data" ],
+        "proxySettings" : {
+          "web" : true,
+          "mobile" : true,
+          "withCredentials" : false
+        },
+        "securityDefinitions" : [ ]
+      }
+    }
+  },
+  "securityDefinitions" : { }
+}

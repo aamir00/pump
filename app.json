@@ -1,0 +1,72 @@
+{
+    "expo": {
+        "androidStatusBar": {
+            "backgroundColor": "#000000",
+            "translucent": false,
+            "barStyle": "dark-content"
+        },
+        "name": "Pump",
+        "slug": "Pump",
+        "version": "0.0.1",
+        "jsEngine": "hermes",
+        "orientation": "portrait",
+        "icon": "./assets/resources/assets/icon.png",
+        "splash": {
+            "image": "./assets/resources/assets/splash.png",
+            "resizeMode": "cover"
+        },
+        "updates": {
+            "fallbackToCacheTimeout": 0
+        },
+        "assetBundlePatterns": [
+            "**/*"
+        ],
+        "ios": {
+            "backgroundColor": "#007bff",
+            "supportsTablet": true,
+            "bundleIdentifier": "com.pump"
+        },
+        "android": {
+            "softwareKeyboardLayoutMode": "pan",
+            "adaptiveIcon": {
+                "foregroundImage": "./assets/resources/assets/icon.png"
+            },
+            "package": "com.pump"
+        },
+        "web": {
+            "bundler": "metro",
+            "favicon": "./assets/favicon.png"
+        },
+        "extra": {
+            "supportsRTL": true
+        },
+        "plugins": [
+            [
+                "expo-build-properties",
+                {
+                    "android": {
+                        "useLegacyPackaging": true
+                    }
+                }
+            ],
+            [
+                "expo-video",
+                {
+                    "supportsBackgroundPlayback": true,
+                    "supportsPictureInPicture": true
+                }
+            ],
+            [
+                "expo-splash-screen",
+                {
+                    "image": "./assets/icon.png",
+                    "dark": {
+                        "image": "./assets/icon.png"
+                    },
+                    "imageWidth": 200
+                }
+            ]
+        ],
+        "newArchEnabled": true
+    }
+}
